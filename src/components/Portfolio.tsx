@@ -52,9 +52,6 @@ const Portfolio: React.FC = () => {
           <p className="text-muted-foreground">
             © {new Date().getFullYear()} Vara Rahul Rajana. All rights reserved.
           </p>
-          <p className="text-sm text-muted-foreground mt-2">
-            Built with React, TypeScript, and Tailwind CSS
-          </p>
         </div>
       </footer>
     </div>
