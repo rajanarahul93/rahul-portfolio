@@ -5,7 +5,6 @@ import { OrbitControls } from '@react-three/drei';
 import { Download, Github, Linkedin, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import * as THREE from 'three';
-import Projects from './Projects';
 
 const AnimatedSphere = () => {
   const meshRef = useRef<THREE.Mesh>(null);

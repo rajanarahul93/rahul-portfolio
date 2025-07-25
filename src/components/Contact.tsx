@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Github, Linkedin, Send } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
+import { InlineWidget } from "react-calendly";
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -95,81 +93,33 @@ const Contact: React.FC = () => {
           viewport={{ once: true }}
         >
           <motion.div variants={itemVariants} className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Get In Touch</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Get In Touch
+            </h2>
             <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
             <p className="text-muted-foreground mt-6 max-w-2xl mx-auto">
-              Ready to bring your next project to life? Let's discuss how we can work together.
+              Ready to bring your next project to life? Let's discuss how we can
+              work together.
             </p>
           </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <motion.div variants={itemVariants} className="space-y-6">
-              <div className="glass-card p-8">
-                <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
-                
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium mb-2">
-                      Name
-                    </label>
-                    <Input
-                      id="name"
-                      name="name"
-                      type="text"
-                      value={formData.name}
-                      onChange={handleChange}
-                      placeholder="Your name"
-                      required
-                      className="glass-morphism"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium mb-2">
-                      Email
-                    </label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      placeholder="your.email@example.com"
-                      required
-                      className="glass-morphism"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium mb-2">
-                      Message
-                    </label>
-                    <Textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      placeholder="Tell me about your project..."
-                      rows={6}
-                      required
-                      className="glass-morphism"
-                    />
-                  </div>
-                  
-                  <Button type="submit" className="w-full glass-morphism hover-lift">
-                    <Send className="h-5 w-5 mr-2" />
-                    Send Message
-                  </Button>
-                </form>
-              </div>
-            </motion.div>
+            <div className="glass-card p-8">
+              <h3 className="text-2xl font-semibold mb-6">Book a Meeting</h3>
+              <InlineWidget
+                url="https://calendly.com/rajanarahul93/30min"
+                styles={{ height: "600px" }}
+              />
+            </div>
 
             {/* Contact Information */}
             <motion.div variants={itemVariants} className="space-y-6">
               <div className="glass-card p-8">
-                <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
-                
+                <h3 className="text-2xl font-semibold mb-6">
+                  Contact Information
+                </h3>
+
                 <div className="space-y-6">
                   {contactInfo.map((info, index) => (
                     <div key={index} className="flex items-center space-x-4">
@@ -177,7 +127,9 @@ const Contact: React.FC = () => {
                         {info.icon}
                       </div>
                       <div>
-                        <p className="text-sm text-muted-foreground">{info.label}</p>
+                        <p className="text-sm text-muted-foreground">
+                          {info.label}
+                        </p>
                         {info.href ? (
                           <a
                             href={info.href}
@@ -197,7 +149,7 @@ const Contact: React.FC = () => {
               {/* Social Links */}
               <div className="glass-card p-8">
                 <h3 className="text-2xl font-semibold mb-6">Social Links</h3>
-                
+
                 <div className="space-y-4">
                   {socialLinks.map((social, index) => (
                     <a
@@ -212,7 +164,9 @@ const Contact: React.FC = () => {
                       </div>
                       <div>
                         <p className="font-medium">{social.label}</p>
-                        <p className="text-sm text-muted-foreground">{social.username}</p>
+                        <p className="text-sm text-muted-foreground">
+                          {social.username}
+                        </p>
                       </div>
                     </a>
                   ))}
@@ -220,13 +174,18 @@ const Contact: React.FC = () => {
               </div>
 
               {/* Available for Work */}
-              <motion.div variants={itemVariants} className="glass-card p-8 text-center">
+              <motion.div
+                variants={itemVariants}
+                className="glass-card p-8 text-center"
+              >
                 <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Available for Work</h3>
+                <h3 className="text-xl font-semibold mb-2">
+                  Available for Work
+                </h3>
                 <p className="text-muted-foreground">
-                  I'm currently open to new opportunities and exciting projects. 
+                  I'm currently open to new opportunities and exciting projects.
                   Let's create something amazing together!
                 </p>
               </motion.div>
