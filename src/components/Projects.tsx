@@ -6,15 +6,15 @@ import { Button } from "@/components/ui/button";
 const Projects: React.FC = () => {
   const projects = [
     {
-      title: "FocusForge",
+      title: "Medicine Scheduler",
       description:
-        "Ambient sound productivity app with customizable soundscapes, focus timers, and beautiful UI animations.",
-      tags: ["React", "Tailwind", "Framer Motion"],
-      liveUrl: "https://focus-forge-eight.vercel.app/",
-      githubUrl: "https://github.com/rajanarahul93/FocusForge",
-      image: "/projects/focusforge.png",
+        "Progressive Web App for smart medication management with reminders, weekly calendar view, adherence analytics, and full offline support.",
+      tags: ["React", "TypeScript", "anime.js", "Tailwind", "PWA", "Framer Motion"],
+      liveUrl: "https://medicine-scheduler-three.vercel.app/",
+      githubUrl: "https://github.com/rajanarahul93/medicine-scheduler",
+      image: "/projects/medical-scheduler.png",
       featured: false,
-      gradient: "from-purple-500 to-pink-500",
+      gradient: "from-cyan-500 to-blue-500",
     },
     {
       title: "trimrr",
@@ -35,7 +35,7 @@ const Projects: React.FC = () => {
       liveUrl: "https://quick-buy-frontend.vercel.app/",
       githubUrl: "https://github.com/rajanarahul93/quickbuy",
       image: "/projects/QuickBuy.png",
-      featured: true,
+      featured: false,
       gradient: "from-green-500 to-blue-500",
     },
     {
@@ -64,7 +64,7 @@ const Projects: React.FC = () => {
       liveUrl: "https://form-iq.vercel.app/",
       githubUrl: "https://github.com/rajanarahul93/FormIQ",
       image: "/projects/formiq.png",
-      featured: false,
+      featured: true,
       gradient: "from-emerald-500 to-green-600",
     },
   ];
