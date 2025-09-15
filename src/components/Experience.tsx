@@ -15,6 +15,22 @@ const Experience: React.FC = () => {
       icon: <Code2 className="h-5 w-5" />
     },
     {
+      type: "work",
+      title: "Frontend Developer Intern",
+      company: "Stealth Startup (backed by Nirmaan IIT Madras)",
+      period: "Feb 2025 - Mar 2025",
+      location: "Remote",
+      description:
+        "Built and optimized key web features for an early-stage product using React and TypeScript. Worked closely with a small team to refine UI, improve performance, and iterate quickly through testing and feedback cycles.",
+      skills: [
+        "React",
+        "TypeScript",
+        "UI Development",
+        "Performance Optimization",
+      ],
+      icon: <Code2 className="h-5 w-5" />,
+    },
+    {
       type: "contribution",
       title: "Open Source Contributor",
       company: "GirlScript Summer of Code",
@@ -24,16 +40,6 @@ const Experience: React.FC = () => {
       skills: ["React", "Open Source", "Git", "JavaScript"],
       icon: <Award className="h-5 w-5" />
     },
-    {
-      type: "contribution",
-      title: "Open Source Contributor",
-      company: "Social Summer of Code",
-      period: "Apr 2024 - Aug 2024",
-      location: "Remote",
-      description: "Collaborated on community-driven projects, implementing new features and fixing bugs.",
-      skills: ["Node.js", "Express", "MongoDB", "TypeScript"],
-      icon: <Award className="h-5 w-5" />
-    }
   ];
 
   const certifications = [
